@@ -5,7 +5,13 @@ export const metadata: Metadata = {
     title: 'Ratio1 Services',
     description: 'Ratio1 service placeholder pages',
     icons: {
-        icon: '/favicon.ico',
+        icon: [
+            {
+                url: '/favicon.svg',
+                type: 'image/svg+xml',
+            },
+        ],
+        apple: '/apple-touch-icon.png',
     },
 };
 
