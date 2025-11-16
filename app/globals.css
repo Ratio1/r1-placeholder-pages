@@ -1,0 +1,86 @@
+/* Font Import - Using Google Fonts API */
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto+Mono:wght@500&display=swap');
+
+/* Tailwind CSS Import */
+@import 'tailwindcss';
+
+/* Config Reference */
+@config '../tailwind.config.ts';
+
+/* Theme Variables (Tailwind v4) */
+@theme {
+    --breakpoint-*: initial;
+    --breakpoint-xs: 400px;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-larger: 1260px;
+    --breakpoint-xl: 1320px;
+
+    --font-mona: Mona Sans, sans-serif;
+    --font-roboto-mono: Roboto Mono, serif;
+
+    --color-body: #0b0b47;
+    --color-light: #fcfcfd;
+    --color-primary: #1b47f7;
+
+    --color-slate-75: #f6f8fa;
+    --color-slate-150: #e9edf2;
+
+    --shadow-custom: 0 0 0 3px #e2e8f0;
+
+    --width-sider: 250px;
+}
+
+/* Base Utilities */
+@layer utilities {
+    body {
+        @apply h-screen w-screen bg-light font-mona text-body;
+    }
+}
+
+/* Custom Utility Classes */
+.row {
+    @apply flex items-center;
+}
+
+.col {
+    @apply flex flex-col;
+}
+
+.center-all {
+    @apply flex items-center justify-center;
+}
+
+.active {
+    @apply text-primary;
+}
+
+/* Typography Classes */
+.big-title {
+    @apply text-lg font-semibold lg:text-[20px];
+}
+
+.section-title {
+    @apply flex min-h-[28px] items-center text-[17px] font-semibold;
+}
+
+.compact {
+    @apply text-sm font-medium;
+}
+
+/* Scrollbar Styling */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f7f7f9;
+    background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #eaecf7;
+    border-radius: 0px;
+    border: 0;
+}
